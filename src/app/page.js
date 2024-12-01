@@ -14,6 +14,7 @@ export default function Home() {
   <Header/>
   <HomePage/>
   <DocumentAudioPage/>
+  <Contact/>
   <Footer/>
 
 </div>

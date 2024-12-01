@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <header className="bg-[#222324] text-white py-8">
+    <header className="bg-[#222324] text-white py-1">
       <div className="container mx-auto flex flex-col items-center px-4">
         
         {/* Logo and Title Section */}
