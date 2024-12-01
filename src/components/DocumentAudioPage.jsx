@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
 import Head from "next/head";
 import "@react-pdf-viewer/core/lib/styles/index.css";
+import * as pdfjs from 'pdfjs-dist/webpack';
+
 
 const Viewer = dynamic(
   async () => {
