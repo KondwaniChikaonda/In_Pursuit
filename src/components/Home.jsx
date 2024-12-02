@@ -9,8 +9,8 @@ export default function HomePage() {
           className="rounded-lg shadow-lg transform transition duration-300 hover:scale-105"
           src="/home.png"
           alt="Logo"
-          height={800} // Increased height
-          width={600}  // Increased width
+          height={800} 
+          width={600}  
         />
       </div>
 
