@@ -35,7 +35,7 @@ export async function POST(request) {
     // Mail options
     const mailOptions = {
       from: `"In pursuit" <${user}>`,
-      to: "", 
+      to: "frasermsusa@gmail.com", 
       subject: "Message from In pursuit webpage", 
       text: `Message: ${message}`,
       html: `<p><strong>Message:</strong> ${message}</p>`,

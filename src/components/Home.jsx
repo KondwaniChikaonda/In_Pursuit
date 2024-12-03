@@ -7,9 +7,9 @@ export default function HomePage() {
       <div className="flex justify-center md:justify-start mb-6 md:mb-0 md:w-1/2">
         <Image
           className="rounded-lg shadow-lg transform transition duration-300 hover:scale-105"
-          src="/home.png"
+          src="/download.jpg"
           alt="Logo"
-          height={800} 
+          height={600} 
           width={600}  
         />
       </div>

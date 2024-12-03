@@ -1,13 +1,9 @@
 "use client";
 
 import React, { useState } from "react";
-import Contactdetail from "./Contactdetail"; // Ensure this path is correct
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
     message: "",
   });
 
@@ -38,7 +34,7 @@ const ContactForm = () => {
       if (response.ok) {
         const data = await response.json();
         setStatus({ loading: false, success: data.message, error: null });
-        setFormData({ name: "", email: "", subject: "", message: "" });
+        setFormData({ message: "" });
       } else {
         const errorData = await response.json();
         setStatus({ loading: false, success: null, error: errorData.error });
@@ -60,12 +56,10 @@ const ContactForm = () => {
           <h1 className="text-black text-3xl font-bold mb-6">
             <strong>Contact Me!</strong>
           </h1>
-
-          <div className="my-6 p-6 bg-white bg-opacity-90 rounded-lg shadow-lg w-full max-w-4xl text-center">
+          <div className="my-6 p-6 bg-white bg-opacity-90 rounded-lg w-full max-w-4xl text-center">
             <h3 className="text-lg font-semibold text-gray-700 mb-4">
               Please do not hesitate to reach out for comments.. ❤️
             </h3>
-            {/* Add Contactdetail if needed */}
           </div>
         </section>
 
@@ -82,10 +76,13 @@ const ContactForm = () => {
             onChange={handleChange}
             value={formData.message}
           ></textarea>
-          <br />
+          {status.loading && <p className="text-blue-500 mb-4">Sending...</p>}
+          {status.success && <p className="text-green-500 mb-4">{status.success}</p>}
+          {status.error && <p className="text-red-500 mb-4">{status.error}</p>}
           <button
             type="submit"
             className="w-full py-3 bg-gray-400 text-white font-semibold rounded-md hover:bg-gray-500 transition duration-200"
+            disabled={status.loading}
           >
             Submit
           </button>

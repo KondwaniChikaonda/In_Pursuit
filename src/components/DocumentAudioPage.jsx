@@ -22,7 +22,7 @@ export default function DocumentAudioPage() {
 
   return (
     <div
-      className="h-screen w-screen bg-cover bg-center flex flex-col items-center justify-center"
+      className="py-10 w-screen bg-cover bg-center flex flex-col items-center justify-center"
       style={{
         backgroundImage: "url('/sun.jpg')", // Replace with your background image URL
       }}

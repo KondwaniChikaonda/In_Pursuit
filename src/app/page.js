@@ -15,7 +15,7 @@ export default function Home() {
   <HomePage/>
   <DocumentAudioPage/>
   <Contact/>
-  <Footer/>
+  
 
 </div>
   );
