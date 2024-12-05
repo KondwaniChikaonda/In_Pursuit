@@ -2,15 +2,15 @@ import Image from "next/image";
 
 export default function HomePage() {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-center bg-white py-10 px-6">
+    <div className="flex flex-col md:flex-row items-center md:items-start justify-center bg-white py-10 px-6 gap-6">
       {/* Image section */}
-      <div className="flex justify-center md:justify-start mb-6 md:mb-0 md:w-1/2">
+      <div className="flex justify-center md:justify-start mb-6 md:mb-0 md:w-1/2 self-start mt-10">
         <Image
           className="rounded-lg shadow-lg transform transition duration-300 hover:scale-105"
-          src="/download.jpg"
-          alt="Logo"
-          height={600} 
-          width={600}  
+          src="/home.webp"
+          alt="home page photo"
+          height={600}
+          width={600}
         />
       </div>
 

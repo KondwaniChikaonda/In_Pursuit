@@ -1,4 +1,5 @@
 "use client";
+import Contactdetail from "./Contactdetail";
 
 import React, { useState } from "react";
 
@@ -53,7 +54,7 @@ const ContactForm = () => {
     <div>
       <div className="p-6 flex flex-col items-center bg-cover bg-center">
         <section>
-          <h1 className="text-black text-3xl font-bold mb-6">
+          <h1 className="text-black text-3xl font-bold mb-6 text-center">
             <strong>Contact Me!</strong>
           </h1>
           <div className="my-6 p-6 bg-white bg-opacity-90 rounded-lg w-full max-w-4xl text-center">
@@ -61,11 +62,12 @@ const ContactForm = () => {
               Please do not hesitate to reach out for comments.. ❤️
             </h3>
           </div>
+          <Contactdetail/>
         </section>
 
         <form
           onSubmit={handleSubmit}
-          className="w-full max-w-4xl p-6 bg-white bg-opacity-90 rounded-lg shadow-lg mt-8"
+          className="w-full max-w-4xl p-6 bg-white bg-opacity-90 rounded-lg shadow-lg mt-2"
         >
           <textarea
             cols={50}
@@ -81,7 +83,7 @@ const ContactForm = () => {
           {status.error && <p className="text-red-500 mb-4">{status.error}</p>}
           <button
             type="submit"
-            className="w-full py-3 bg-gray-400 text-white font-semibold rounded-md hover:bg-gray-500 transition duration-200"
+            className="w-fit py-3 px-5 bg-gray-400 text-white font-semibold rounded-md hover:bg-gray-500 transition duration-200"
             disabled={status.loading}
           >
             Submit

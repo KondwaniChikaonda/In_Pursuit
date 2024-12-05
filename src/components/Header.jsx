@@ -8,22 +8,18 @@ export default function Header() {
         
         {/* Logo and Title Section */}
         <div className="flex items-center space-x-4 mb-6 gap-6">
-          <div className="flex justify-center items-center bg-white rounded-full p-2 hover:bg-gray-500 transition-all duration-200 ease-in-out">
-            <Image
-              className="rounded-full"
-              src="/download.jpg"
+          <Image
+              className=""
+              src="/logo.png"
               alt="Logo"
-              height={50}  
-              width={50}  
+              height={100}  
+              width={600}  
             />
-          </div>
-          <h1 className="text-3xl font-serif font-semibold text-gray-100 hover:text-gray-300 transition-all duration-200 ease-in-out">
-            IN PURSUIT
-          </h1>
+          
         </div>
 
         {/* Tagline Section */}
-        <p className="mt-4 text-center text-lg font-serif font-normal leading-8 text-[#fff] opacity-80 hover:opacity-100 transition-all duration-200 ease-in-out">
+        <p className="mt-4 text-center text-3xl font-serif font-normal leading-8 text-white hover:opacity-100 transition-all duration-200 ease-in-out">
           Known by Him, known for Him and making Him known
         </p>
 

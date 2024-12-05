@@ -1,9 +1,7 @@
-import { useState, useEffect } from "react";
+import { useState, useRef } from "react";
 import dynamic from "next/dynamic";
 import Head from "next/head";
 import "@react-pdf-viewer/core/lib/styles/index.css";
-import * as pdfjs from 'pdfjs-dist/webpack';
-
 
 const Viewer = dynamic(
   async () => {
@@ -18,7 +16,20 @@ const Viewer = dynamic(
 );
 
 export default function DocumentAudioPage() {
-  const [pdfFile, setPdfFile] = useState("/documents/document.pdf"); // Path to your PDF file
+  const [pdfFile] = useState("/documents/document.pdf"); // Path to your PDF file
+  const [isPlaying, setIsPlaying] = useState(false); // State to track audio playback
+  const audioRef = useRef(null);
+
+  const toggleAudioPlayback = () => {
+    if (audioRef.current) {
+      if (isPlaying) {
+        audioRef.current.pause();
+      } else {
+        audioRef.current.play();
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
 
   return (
     <div
@@ -51,14 +62,17 @@ export default function DocumentAudioPage() {
           </a>
         </div>
 
-        {/* Audio Button */}
+        {/* Audio Control Button */}
         <div>
           <p className="mb-2 text-gray-700">Listen to the audio:</p>
+          <audio ref={audioRef} src="/donmoen.mp3" />
           <button
-            onClick={() => new Audio("/audio/audio.mp3").play()} // Replace with your audio file URL
-            className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-gray-600 transition"
+            onClick={toggleAudioPlayback}
+            className={`px-4 py-2 rounded transition ${
+              isPlaying ? "bg-red-500 hover:bg-red-600" : "bg-blue-500 hover:bg-blue-600"
+            } text-white`}
           >
-            Play Audio
+            {isPlaying ? "Pause Audio" : "Play Audio"}
           </button>
         </div>
       </div>
