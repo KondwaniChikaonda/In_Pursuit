@@ -7,7 +7,7 @@ export default function HomePage() {
       <div className="flex justify-center md:justify-start mb-6 md:mb-0 md:w-1/2 self-start mt-10">
         <Image
           className="rounded-lg shadow-lg transform transition duration-300 hover:scale-105"
-          src="/home.webp"
+          src="/HOW GRACE FOUND ME.png"
           alt="home page photo"
           height={600}
           width={600}

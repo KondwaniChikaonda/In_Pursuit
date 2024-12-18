@@ -16,7 +16,7 @@ const Viewer = dynamic(
 );
 
 export default function DocumentAudioPage() {
-  const [pdfFile] = useState("/documents/document.pdf"); // Path to your PDF file
+  const [pdfFile] = useState("/documents/How Grace Found Me - Yankho Mhango.pdf"); // Path to your PDF file
   const [isPlaying, setIsPlaying] = useState(false); // State to track audio playback
   const audioRef = useRef(null);
 
@@ -35,7 +35,7 @@ export default function DocumentAudioPage() {
     <div
       className="py-10 w-screen bg-cover bg-center flex flex-col items-center justify-center"
       style={{
-        backgroundImage: "url('/sun.jpg')", // Replace with your background image URL
+        backgroundImage: "url('/sun.jpg')",
       }}
     >
       <Head>
@@ -65,7 +65,7 @@ export default function DocumentAudioPage() {
         {/* Audio Control Button */}
         <div>
           <p className="mb-2 text-gray-700">Listen to the audio:</p>
-          <audio ref={audioRef} src="/donmoen.mp3" />
+          <audio ref={audioRef} src="/How grace found me.mp3" />
           <button
             onClick={toggleAudioPlayback}
             className={`px-4 py-2 rounded transition ${
