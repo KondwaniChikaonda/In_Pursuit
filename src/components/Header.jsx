@@ -23,7 +23,7 @@ export default function Header() {
           Known by Him, known for Him and making Him known
         </p>
 
-        {/* Navigation Section */}
+        {/* Navigation Section here */}
         <nav className="mt-6">
           <ul className="flex space-x-8 text-sm uppercase font-medium">
             <li className="hover:text-gray-400 transition-all duration-200 ease-in-out">
