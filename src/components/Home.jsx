@@ -14,7 +14,7 @@ export default function HomePage() {
         />
       </div>
 
-      {/* Text section */}
+     
       <div className="max-w-3xl text-center md:text-left md:w-1/2">
         <h1 className="font-serif text-4xl font-semibold text-gray-800 mb-4">
           Introduction
