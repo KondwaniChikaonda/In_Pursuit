@@ -16,8 +16,8 @@ const Viewer = dynamic(
 );
 
 export default function DocumentAudioPage() {
-  const [pdfFile] = useState("/documents/How Grace Found Me - Yankho Mhango.pdf"); // Path to your PDF file
-  const [isPlaying, setIsPlaying] = useState(false); // State to track audio playback
+  const [pdfFile] = useState("/documents/How Grace Found Me - Yankho Mhango.pdf");
+  const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef(null);
 
   const toggleAudioPlayback = () => {
